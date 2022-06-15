@@ -12,7 +12,7 @@ const Settings: NextPage = () => {
 			<div className={styles.form}>
 				<h1 className={styles.title}>Сменить имя пользователя</h1>
 				<Input placeholder='Имя' />
-				<Button type='fill'>Изменить</Button>
+				<Button type='fill'>Изменить </Button>
 			</div>
 		</div>
 	)

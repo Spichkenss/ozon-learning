@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import React, { FC } from 'react'
 import styles from '../styles/CourseItem.module.css'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const cutString = (string: string): string => {
 	const short = string.substring(0, 23)
@@ -22,19 +24,21 @@ interface Props {
 
 const CourseItem: FC<Props> = ({ course }) => {
 	return (
-		<div className={styles.container}>
-			<h1 className={styles.title}>{cutString(course.title)}</h1>
-			<div className={styles.image}>
-				<Image
-					src={course.preview}
-					alt={'Preview'}
-					layout='responsive'
-					width={1280}
-					height={720}
-				/>
-			</div>
-			<p className={styles.description}>{course.description}</p>
-		</div>
+		<Link href={`/courses/${course.id}`}>
+			<motion.div whileHover={{ scale: 1.01 }} className={styles.container}>
+				<h1 className={styles.title}>{cutString(course.title)}</h1>
+				<div className={styles.image}>
+					<Image
+						src={course.preview}
+						alt={'Preview'}
+						layout='responsive'
+						width={1280}
+						height={720}
+					/>
+				</div>
+				<p className={styles.description}>{course.description}</p>
+			</motion.div>
+		</Link>
 	)
 }
 
