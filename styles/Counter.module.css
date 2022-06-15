@@ -1,0 +1,23 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.counter {
+	font-size: 64px;
+}
+
+.title {
+	font-size: 32px;
+}
+
+@media (max-width: 520px) {
+	.title {
+		font-size: 18px;
+	}
+	.counter {
+		font-size: 32px;
+	}
+}

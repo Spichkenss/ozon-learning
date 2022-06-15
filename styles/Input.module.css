@@ -1,0 +1,23 @@
+.container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
+	border: 2px solid #015aff;
+	border-radius: 100px;
+	overflow: hidden;
+	padding: 0 10px;
+}
+
+.input {
+	height: 60px;
+	width: 100%;
+	border: none;
+	outline: none;
+	font-size: medium;
+}
+
+.button {
+	position: absolute;
+	right: 5px;
+}
