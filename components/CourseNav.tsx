@@ -1,16 +1,16 @@
 import Link from 'next/link'
-import { FC, useEffect, useState } from 'react'
-import BurgerIcon from '../icons/BurgerIcon'
-import styles from '../styles/Navbar.module.css'
-import { AnimatePresence, motion } from 'framer-motion'
+import React, { useEffect, useState } from 'react'
 import useWindowSize from '../hooks/useWindowSize'
+import BurgerIcon from '../icons/BurgerIcon'
+import styles from '../styles/CourseNav.module.css'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const variants = {
 	initial: { x: 300 },
 	animate: { x: 0 },
 }
 
-const Navbar: FC = () => {
+const CourseNav = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
 	const { visible } = useWindowSize()
 
@@ -27,7 +27,7 @@ const Navbar: FC = () => {
 	return (
 		<nav className={styles.navbar}>
 			<div className={styles.burger}>
-				<BurgerIcon color='#015aff' toggleMenu={() => toggleMenu(isOpen)} />
+				<BurgerIcon color={'white'} toggleMenu={() => toggleMenu(isOpen)} />
 			</div>
 			<div className={styles.container}>
 				<div>
@@ -47,26 +47,26 @@ const Navbar: FC = () => {
 								className={styles.links}
 							>
 								<Link href='/courses'>
-									<a className={styles.link}>Курсы</a>
+									<a className={styles.link}>Все курсы</a>
 								</Link>
-								<Link href='/about'>
-									<a className={styles.link}>Об Ozon Learning</a>
+								<Link href='/courses/study'>
+									<a className={styles.link}>Обучение</a>
 								</Link>
-								<Link href='/companies'>
-									<a className={styles.link}>Компаниям</a>
+								<Link href='/settings'>
+									<a className={styles.link}>Настройки</a>
 								</Link>
 							</motion.div>
 						)
 					) : (
 						<div className={styles.links}>
 							<Link href='/courses'>
-								<a className={styles.link}>Курсы</a>
+								<a className={styles.link}>Все курсы</a>
 							</Link>
-							<Link href='/about'>
-								<a className={styles.link}>Об Ozon Learning</a>
+							<Link href='/courses/study'>
+								<a className={styles.link}>Обучение</a>
 							</Link>
-							<Link href='/companies'>
-								<a className={styles.link}>Компаниям</a>
+							<Link href='/settings'>
+								<a className={styles.link}>Настройки</a>
 							</Link>
 						</div>
 					)}
@@ -76,4 +76,4 @@ const Navbar: FC = () => {
 	)
 }
 
-export default Navbar
+export default CourseNav

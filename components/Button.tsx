@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React, { FC } from 'react'
+import { Url } from 'url'
 import styles from '../styles/Button.module.css'
 
 export type ButtonType = 'outline' | 'fill'
@@ -7,12 +8,12 @@ export type ButtonType = 'outline' | 'fill'
 interface Props {
 	children: React.ReactNode
 	type: ButtonType
-	href: string
+	href?: Url
 }
 
 const Button: FC<Props> = ({ children, type, href }) => {
 	return (
-		<Link href={href}>
+		<Link href={href || ''}>
 			<a
 				className={[
 					styles.button,

@@ -8,7 +8,7 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	background: white;
+	background: #015aff;
 	-webkit-box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.3);
 	-moz-box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.3);
 	box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.3);
@@ -27,7 +27,7 @@
 .logo {
 	font-size: 32px;
 	font-weight: 900;
-	color: #015aff;
+	color: white;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -44,7 +44,7 @@
 .link {
 	margin-left: 40px;
 	font-size: 24px;
-	color: black;
+	color: white;
 }
 
 .burger {
@@ -76,7 +76,7 @@
 		top: 0;
 		right: 0;
 		flex-direction: column;
-		background: white;
+		background: #015aff;
 		-webkit-box-shadow: -10px 0 15px -5px rgba(0, 0, 0, 0.3);
 		-moz-box-shadow: -10px 0 15px -5px rgba(0, 0, 0, 0.3);
 		box-shadow: -10px 0 15px -5px rgba(0, 0, 0, 0.3);

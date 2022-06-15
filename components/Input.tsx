@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import styles from '../styles/Input.module.css'
 
 interface Props {
-	children: React.ReactNode
+	children?: React.ReactNode
 	placeholder: string
 }
 
