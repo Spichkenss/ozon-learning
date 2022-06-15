@@ -8,7 +8,7 @@ export type ButtonType = 'outline' | 'fill'
 interface Props {
 	children: React.ReactNode
 	type: ButtonType
-	href?: Url
+	href?: string
 }
 
 const Button: FC<Props> = ({ children, type, href }) => {

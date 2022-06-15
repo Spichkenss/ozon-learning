@@ -4,6 +4,7 @@ import useWindowSize from '../hooks/useWindowSize'
 import BurgerIcon from '../icons/BurgerIcon'
 import styles from '../styles/CourseNav.module.css'
 import { AnimatePresence, motion } from 'framer-motion'
+import { Url } from 'url'
 
 const variants = {
 	initial: { x: 300 },
