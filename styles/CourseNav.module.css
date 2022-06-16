@@ -71,7 +71,7 @@
 		flex-direction: row;
 	}
 	.links {
-		min-height: 100vh;
+		height: 110vh;
 		position: fixed;
 		top: 0;
 		right: 0;
